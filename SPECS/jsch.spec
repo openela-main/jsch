@@ -1,6 +1,6 @@
 Name:           jsch
 Version:        0.1.55
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Pure Java implementation of SSH2
 License:        BSD
 URL:            http://www.jcraft.com/jsch/
@@ -64,6 +64,9 @@ zip target/%{name}-%{version}.jar plugin.properties
 %license LICENSE.txt
 
 %changelog
+* Wed Nov 20 2024 Marián Konček <mkoncek@redhat.com> - 0.1.55-6
+- Rebuild with regenerated Requires on Java
+
 * Mon Aug 09 2021 Mohan Boddu <mboddu@redhat.com> - 0.1.55-5
 - Rebuilt for IMA sigs, glibc 2.34, aarch64 flags
   Related: rhbz#1991688
