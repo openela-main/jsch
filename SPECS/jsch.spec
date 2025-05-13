@@ -1,10 +1,11 @@
 Name:           jsch
 Version:        0.1.55
-Release:        6%{?dist}
+Release:        8%{?dist}
 Summary:        Pure Java implementation of SSH2
 License:        BSD
 URL:            http://www.jcraft.com/jsch/
 BuildArch:      noarch
+ExclusiveArch:  aarch64 ppc64le s390x x86_64 noarch
 
 Source0:        http://download.sourceforge.net/sourceforge/jsch/jsch-%{version}.zip
 # stripped manifest based on 
@@ -64,6 +65,12 @@ zip target/%{name}-%{version}.jar plugin.properties
 %license LICENSE.txt
 
 %changelog
+* Sat Nov 23 2024 Marián Konček <mkoncek@redhat.com> - 0.1.55-8
+- Add noarch to ExclusiveArch
+
+* Fri Nov 22 2024 Marián Konček <mkoncek@redhat.com> - 0.1.55-7
+- Disable building on i686
+
 * Wed Nov 20 2024 Marián Konček <mkoncek@redhat.com> - 0.1.55-6
 - Rebuild with regenerated Requires on Java
 
